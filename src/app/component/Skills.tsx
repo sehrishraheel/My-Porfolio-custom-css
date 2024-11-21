@@ -7,7 +7,7 @@ const Skills = () => {
         <div className="skills-description">
           <h2 className="skills-heading">Technologies I work with</h2>
           <p className="skills-text">
-            I have strong proficiency in programming languages such as Python, JavaScript, and C++. I'm experienced in web development using HTML, CSS, and React, and skilled in back-end technologies like Node.js. I excel in problem-solving and thrive in Agile team environments.
+            I have strong proficiency in programming languages such as Python, JavaScript, and C++. I`&apos;m experienced in web development using HTML, CSS, and React, and skilled in back-end technologies like Node.js. I excel in problem-solving and thrive in Agile team environments.
           </p>
         </div>
         <div className="skills-list">
