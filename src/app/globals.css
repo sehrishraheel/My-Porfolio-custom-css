@@ -1,0 +1,415 @@
+/* General Styling */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+#hero {
+  min-height: 100vh;
+  background-image: url('/pic.png');
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-position: left 100px top 100px;
+  background-color: black;
+  color: white;
+  padding-left: 100px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 60px);
+  padding: 0 20px;
+}
+
+.hero-image {
+  display: none;
+}
+
+.hero-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.flip-right {
+  animation: flip-right 1s ease-in-out;
+}
+
+@keyframes flip-right {
+  0% {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-text {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    display: block;
+  }
+}
+
+/* Navbar container */
+.navbar-container {
+  position: fixed;
+  padding-top: 2rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 80;
+  flex-wrap: wrap ;
+  
+}
+
+/* Navbar Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.navbar-logo {
+  font-size: 1.50rem;
+  font-weight: 600;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  display: none;
+  gap: 2.5rem; /* Default gap for large screens */
+}
+
+.navbar-menu.show {
+  display: flex; /* For medium and above screen sizes */
+}
+
+/* Menu links */
+.navbar-menu li {
+  list-style: none;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.22rem;
+  font-weight: 600; /* Bold text */
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-menu a:hover {
+  color: #fff;
+}
+
+
+/* Menu icon */
+.menu-icon {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-menu {
+      display: flex;
+  }
+  .menu-icon {
+      display: none;
+  }
+}
+
+
+/* Heading Component */
+.heading-container {
+  text-align: center;
+  font-size: 2.25rem;
+  padding-bottom: 2rem;
+}
+
+.heading-title {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid black;
+}
+
+/* Projects Section */
+.projects-container {
+  padding-top: 8rem;
+  background-color: #111;
+  color: white;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  gap: 2.5rem;
+  place-items: center;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Container */
+.card-container {
+  border: 1px solid var(--accent-color);
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/* Card Content */
+.card-content {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.card-desc {
+  font-size: 1rem;
+  color: #fac6c6;
+}
+
+.card-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #fa6fee;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.975rem;
+  color: #333;
+}
+
+/* Container for Skills Section */
+.skills-container {
+  padding-top: 8rem;
+  width: 100%;
+  background-color: #111;
+  color: white;
+}
+
+/* Grid layout for content */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Skills description (heading and paragraph) */
+.skills-description {
+  text-align: left;
+}
+
+.skills-heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.skills-text {
+  color: #e9ecf3;
+  padding-top: 1rem;
+  font-size: 1.10rem;
+
+}
+
+/* Skills list (Technology tags) */
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Individual skill items */
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* About Section Container */
+.about-container {
+  padding-top: 8rem;
+  width: 100%;
+  text-align: center;
+  background-color: #111;
+  color: white;
+}
+
+/* About Section Heading */
+.about-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+/* About Section Text */
+.about-text {
+  color: #6b7280;
+  font-size: 1.125rem;
+  padding-top: 1rem;
+  line-height: 1.75;
+}
+
+/* Contact Section Container */
+.contact-container {
+  padding-top: 120px;  /* Space from the top */
+  width: 100%;
+  min-height: 100vh;  /* Ensure full screen height */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #111;
+  color: rgb(36, 17, 17);
+}
+
+
+
+/* Form and Info Styling */
+.contact-info,
+.contact-form {
+  padding: 2rem;
+  background-color: #130e0e; /* Light background */
+  border-radius: 8px;
+  color: white;
+}
+/* Contact Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem; /* Add space between contact form and info */
+  width: 100%;
+  max-width: 1200px; /* Ensure it's not stretching too wide */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Form Fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.75rem;
+  border: 2px solid  #0bee6a;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form-button {
+  background-color: #0bee6a;
+  color: white;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding-top: 100px; /* Increase padding for mobile screens */
+    display: block;
+  }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Styling */
+.footer-container {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: #14161a;
+  color: white;
+  font-size: 1rem;
+}       
